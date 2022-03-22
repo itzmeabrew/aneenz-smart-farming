@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SensorDataRepo extends CrudRepository<SensorData,Integer>
+public interface SensorDataRepo extends JpaRepository<SensorData,Integer>
 {
 
 }

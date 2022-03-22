@@ -1,8 +1,7 @@
 package com.anz.greenHouse.Model;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 //@Table(name = "SensorData")
@@ -21,6 +20,8 @@ public class SensorData
     private Float barometricPressure;
     private Boolean valveStatus;
     private Integer waterFlow;
+    private Date serverTime;
+    private Date deviceTime;
 
     public SensorData(Integer greenHouseId, Float airTemprature, Float soilMoisture, Float humidity, Float soilTemprature, Float waterTemprature, Float barometricPressure, Boolean valveStatus, Integer waterFlow)
     {
@@ -33,6 +34,35 @@ public class SensorData
         this.barometricPressure = barometricPressure;
         this.valveStatus = valveStatus;
         this.waterFlow = waterFlow;
+    }
+
+    public SensorData(Integer greenHouseId, Float airTemprature, Float soilMoisture, Float humidity, Float soilTemprature, Float waterTemprature, Float barometricPressure, Boolean valveStatus, Integer waterFlow, Date serverTime)
+    {
+        this.greenHouseId = greenHouseId;
+        this.airTemprature = airTemprature;
+        this.soilMoisture = soilMoisture;
+        this.humidity = humidity;
+        this.soilTemprature = soilTemprature;
+        this.waterTemprature = waterTemprature;
+        this.barometricPressure = barometricPressure;
+        this.valveStatus = valveStatus;
+        this.waterFlow = waterFlow;
+        this.serverTime = serverTime;
+    }
+
+    public SensorData(Integer greenHouseId, Float airTemprature, Float soilMoisture, Float humidity, Float soilTemprature, Float waterTemprature, Float barometricPressure, Boolean valveStatus, Integer waterFlow, Date serverTime, Date deviceTime)
+    {
+        this.greenHouseId = greenHouseId;
+        this.airTemprature = airTemprature;
+        this.soilMoisture = soilMoisture;
+        this.humidity = humidity;
+        this.soilTemprature = soilTemprature;
+        this.waterTemprature = waterTemprature;
+        this.barometricPressure = barometricPressure;
+        this.valveStatus = valveStatus;
+        this.waterFlow = waterFlow;
+        this.serverTime = serverTime;
+        this.deviceTime = deviceTime;
     }
 
     public Integer getId()
@@ -133,5 +163,25 @@ public class SensorData
     public void setWaterFlow(Integer waterFlow)
     {
         this.waterFlow = waterFlow;
+    }
+
+    public Date getServerTime()
+    {
+        return serverTime;
+    }
+
+    public void setServerTime(Date serverTime)
+    {
+        this.serverTime = serverTime;
+    }
+
+    public Date getDeviceTime()
+    {
+        return deviceTime;
+    }
+
+    public void setDeviceTime(Date deviceTime)
+    {
+        this.deviceTime = deviceTime;
     }
 }
