@@ -4,5 +4,5 @@ import com.anz.greenHouse.Model.SensorData;
 
 public interface SensorDataServices
 {
-    Boolean updateData(SensorData data);
+    SensorData updateData(SensorData data);
 }

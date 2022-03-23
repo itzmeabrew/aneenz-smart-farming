@@ -12,9 +12,9 @@ public class SensorDataService implements SensorDataServices
     @Autowired
     SensorDataRepo sensorRepo;
 
-    public Boolean updateData(SensorData data)
+    public SensorData updateData(SensorData data)
     {
         SensorData datax = sensorRepo.save(data);
-        return true;
+        return datax;
     }
 }

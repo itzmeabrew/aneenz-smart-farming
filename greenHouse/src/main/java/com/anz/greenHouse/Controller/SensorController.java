@@ -33,8 +33,8 @@ public class SensorController
                                             Float.parseFloat(payload.get("humidity")),Float.parseFloat(payload.get("soil_temp")),Float.parseFloat(payload.get("water_temp")),
                                             Float.parseFloat(payload.get("barometric_pressure")),Boolean.parseBoolean(payload.get("valve")),Integer.parseInt(payload.get("water_flow")),date,new Date(payload.get("device_time")));
 
-        Boolean sts = sns.updateData(newData);
-        if(sts)
+        SensorData sts = sns.updateData(newData);
+        if(sts != null)
         {
             JSONObject json = (JSONObject) parser.parse("{'status':'Updated at " + date.toLocaleString()+"'}");
             return ResponseEntity.ok(json);
