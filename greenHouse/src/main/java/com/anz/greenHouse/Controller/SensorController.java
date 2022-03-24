@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -23,8 +24,15 @@ public class SensorController
 
     JSONParser parser = new JSONParser();
 
+    @GetMapping()
+    private ResponseEntity<List<SensorData>> retriveData()
+    {
+        List<SensorData> retrivedData = sns.getSensorData();
+        return ResponseEntity.ok(retrivedData);
+    }
+
     @PostMapping("/update")
-    private ResponseEntity<JSONObject> sendToServer(@RequestBody Map<String,String> payload) throws ParseException, java.text.ParseException
+    private ResponseEntity<JSONObject> updateData(@RequestBody Map<String,String> payload) throws ParseException, java.text.ParseException
     {
         System.out.println(payload);
 

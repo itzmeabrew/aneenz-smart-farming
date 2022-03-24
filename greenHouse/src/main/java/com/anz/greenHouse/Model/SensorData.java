@@ -23,6 +23,8 @@ public class SensorData
     private Date serverTime;
     private Date deviceTime;
 
+    public SensorData() { }
+
     public SensorData(Integer greenHouseId, Float airTemprature, Float soilMoisture, Float humidity, Float soilTemprature, Float waterTemprature, Float barometricPressure, Boolean valveStatus, Integer waterFlow)
     {
         this.greenHouseId = greenHouseId;

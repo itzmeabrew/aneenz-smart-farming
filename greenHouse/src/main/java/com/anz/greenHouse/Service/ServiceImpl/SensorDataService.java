@@ -6,6 +6,8 @@ import com.anz.greenHouse.Service.SensorDataServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SensorDataService implements SensorDataServices
 {
@@ -16,5 +18,12 @@ public class SensorDataService implements SensorDataServices
     {
         SensorData datax = sensorRepo.save(data);
         return datax;
+    }
+
+    @Override
+    public List<SensorData> getSensorData()
+    {
+        List<SensorData> datas = sensorRepo.findAll();
+        return datas;
     }
 }
