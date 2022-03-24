@@ -18,6 +18,8 @@ public class UserInfo
     private Boolean active;
     private Date lastActive;
 
+    public UserInfo() { }
+
     public UserInfo(String userName, String password, boolean active)
     {
         this.userName = userName;

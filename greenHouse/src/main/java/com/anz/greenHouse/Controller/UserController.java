@@ -1,6 +1,7 @@
 package com.anz.greenHouse.Controller;
 
 
+import com.anz.greenHouse.Model.UserInfo;
 import com.anz.greenHouse.WebSecurity.JwtRequest;
 import com.anz.greenHouse.WebSecurity.JwtResponse;
 import com.anz.greenHouse.WebSecurity.JwtTokenUtil;
@@ -13,6 +14,8 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @CrossOrigin
@@ -39,6 +42,13 @@ public class UserController
         final String token = jwtTokenUtil.generateToken(userDetails);
 
         return ResponseEntity.ok(new JwtResponse(token));
+    }
+
+    @PostMapping("/register")
+    public ResponseEntity<?> saveUser(@RequestBody Map<String,String> payload) throws Exception
+    {
+        //UserInfo user = new UserInfo(payload.get("username"),payload.get("password"),true);
+        return ResponseEntity.ok(userDetailsService.saveUser(payload.get("username"),payload.get("password")));
     }
 
     private void authenticate(String username, String password) throws Exception
