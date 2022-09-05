@@ -1,0 +1,216 @@
+<div class="row">
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Outside Air Temprature</h6>
+        <div class="row" style="color: #e40000">
+          <div class="col-1">
+            <i style="margin-top:-1px" class="fa-solid fa-temperature-full fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>{{KtoC(athmosphricData.temp)}}<sup>°</sup>C</h3>
+          </div>
+          <div class="col-1">
+            <i style="margin-top:8px" class="fa-solid fa-angle-right "></i>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(2)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Relative humidity</h6>
+        <div class="row" style="color: #0063e4">
+          <div class="col-1">
+            <i style="margin-top:-1px" class="fa-solid fa-droplet fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>{{athmosphricData.humidity}}%</h3>
+          </div>
+          <div class="col-1">
+            <i style="margin-top:8px" class="fa-solid fa-angle-right "></i>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(3)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Athmospheric Air Pressure</h6>
+        <div class="row" style="color: #07c500">
+          <div class="col-1">
+            <i tyle="margin-top:-1px" class="fa-solid fa-wind fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>{{athmosphricData.pressure}} hPa</h3>
+          </div>
+          <div class="col-1">
+            <i style="margin-top:8px" class="fa-solid fa-angle-right "></i>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Green House Temprature</h6>
+        <div class="row">
+          <div class="col-1">
+            <i style="margin-top:-1px" class="fa-solid fa-temperature-full fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>12<sup>°</sup>C</h3>
+          </div>
+          <div class="col-1">
+            <i style="margin-top:8px" class="fa-solid fa-angle-right "></i>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Green House Temprature</h6>
+        <div class="row">
+          <div class="col-1">
+            <i style="margin-top:-1px" class="fa-solid fa-temperature-full fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>12<sup>°</sup>C</h3>
+          </div>
+          <div class="col-1">
+            <i style="margin-top:8px" class="fa-solid fa-angle-right "></i>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Soil Temprature</h6>
+        <div class="row">
+          <div class="col-1">
+            <i style="margin-top:-1px" class="fa-solid fa-temperature-full fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>12<sup>°</sup>C</h3>
+          </div>
+          <div class="col-1">
+            <i style="margin-top:8px" class="fa-solid fa-angle-right "></i>
+          </div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+</div>
+
+<br>
+
+<div class="row">
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Water level - Tank 1</h6>
+        <div class="row">
+          <mwl-gauge [max]="100" [dialStartAngle]="-90" [dialEndAngle]="-90.001" [value]="1" [animated]="true" [animationDuration]="1"></mwl-gauge>
+        </div>
+      </div>
+    </button>
+    <span class="badge bg-danger">Alert-Water Level Critical</span>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Water level - Tank 1</h6>
+        <div class="row">
+          <mwl-gauge [max]="100" [dialStartAngle]="-90" [dialEndAngle]="-90.001" [value]="5" [animated]="true" [animationDuration]="1"></mwl-gauge>
+        </div>
+      </div>
+    </button>
+    <span class="badge bg-danger">Alert-Water Level Critical</span>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Water level - Tank 3</h6>
+        <div class="row">
+          <mwl-gauge [max]="100" [dialStartAngle]="-90" [dialEndAngle]="-90.001" [value]="8" [animated]="true" [animationDuration]="1"></mwl-gauge>
+        </div>
+      </div>
+    </button>
+    <span class="badge bg-danger">Alert-Water Level Critical</span>
+  </div>
+
+  <div class="col">
+    <button (click)="switchToChart(1)" class="card">
+      <div class="card-body">
+        <h6 class="card-subtitle mb-3 text-muted">Water level - Tank 4</h6>
+        <div class="row">
+          <mwl-gauge [max]="100" [dialStartAngle]="-90" [dialEndAngle]="-90.001" [value]="12" [animated]="true" [animationDuration]="1"></mwl-gauge>
+        </div>
+      </div>
+    </button>
+    <span class="badge bg-warning">Warning-Low Water Level</span>
+  </div>
+
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header">Electrical Zone Status</div>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Zone 1</div>
+            <span class="badge bg-danger">280V | AC Mains - Y</span>
+            &nbsp;
+            <span class="badge bg-secondary">Solar</span>
+          </div>
+          <h4><span class="badge bg-danger">Over Volt</span></h4>
+          &nbsp;
+          <h4><span class="badge bg-secondary">XX Cutoff</span></h4>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Zone 2</div>
+            <span class="badge bg-success">240V | AC Mains - B</span>
+            &nbsp;
+            <span class="badge bg-secondary">Solar</span>
+          </div>
+          <h4><span class="badge bg-success">OK</span></h4>
+          &nbsp;
+          <h4><span class="badge bg-primary">50 W</span></h4>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold">Zone 3</div>
+            <span class="badge bg-warning">220V | AC Mains - R</span>
+            &nbsp;
+            <span class="badge bg-secondary">Solar</span>
+          </div>
+          <h4><span class="badge bg-warning">Under Volt</span></h4>
+          &nbsp;
+          <h4><span class="badge bg-primary">26 W</span></h4>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

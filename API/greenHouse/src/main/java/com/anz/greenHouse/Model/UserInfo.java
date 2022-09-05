@@ -10,7 +10,7 @@ import java.util.Date;
 public class UserInfo
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String userName;
@@ -24,6 +24,26 @@ public class UserInfo
     {
         this.userName = userName;
         this.password = password;
+        this.active = active;
+    }
+
+    public Integer getId()
+    {
+        return id;
+    }
+
+    public void setId(Integer id)
+    {
+        this.id = id;
+    }
+
+    public Boolean getActive()
+    {
+        return active;
+    }
+
+    public void setActive(Boolean active)
+    {
         this.active = active;
     }
 

@@ -1,28 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">GreenHouse Controller</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
-      </div>
-    </div> -->
-  </div>
-</nav>
-
-
-
 <div class="login-page">
   <div class="form">
     <form [formGroup]="login_form" (ngSubmit)="login_function()" class="login-form">
       <input type="text" formControlName="username" placeholder="Username"/>
       <input type="password" formControlName="password" placeholder="Password"/>
-      <button type="submit">login</button>
+      <button type="submit" class="login-button">login</button>
+      <br>
+      <br>
+      <button type="button" style="width:100%" (click)="loginWithGoogle()" class="btn btn-outline-primary"><i class="fa-brands fa-google"></i>&nbsp;&nbsp;Login with Google</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>

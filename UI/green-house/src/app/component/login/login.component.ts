@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class LoginComponent implements OnInit
       ]),
   })
 
-  constructor(private loginx: LoginService) { }
+  constructor(private loginx: LoginService, private socialAuthService: SocialAuthService) { }
 
   ngOnInit(): void { }
 
@@ -37,9 +38,24 @@ export class LoginComponent implements OnInit
       },
       error =>
       {
-
+        // TODO document why this arrow function is empty
+        console.error(error);
       }
     )
+  }
+
+  public loginWithGoogle(): void
+  {
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+      (response) =>
+      {
+        console.log(response);
+      },
+
+      (error) =>
+      {
+        console.error(error);
+      });
   }
 
 }

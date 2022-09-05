@@ -1,0 +1,38 @@
+This work was inspired by the effects of climate change taking place on our planet and affecting agriculture. It is immediately applicable to the optimization of agricultural production in greenhouses and contributes to slowing down the phenomenon of climate change through water and energy savings.
+
+For this purpose, a complete functional unit for monitoring and controlling the internal environmental conditions of a greenhouse was implemented using a microcontroller (Node MCU) and the development of the appropriate software.
+
+Also with internet connection we can remote monitor and control with an android or iOS device or a web application, using the application created for this purpose.
+
+System has the ablity to maintain climate control regardless of external conditions. The system will automatically. But the most important addition would be the use of machine learning so that the unit can continuously improve the settings of the environmental conditions, therefore without external intervention to apply the ideal conditions for each type of crop and soil.
+
+The proposed system uses DHT11 temprature & humidity sensor,BMP180 barometric preassure sensor,DS18B20 water temprature sensor and soil mositure and temprature sensor to get external and internal temprature parameters. The system comes with an automated soleniod valve connected to a flow meter.This enables us to moisturise the soil and do it in such a way the water is conserved. This prevents unwanted wastage of water. 
+
+Node MCU will act as the system core. It is responsible for measureing diffrent climate prameters , performing the necessary calculations and sending control signals to diffrent acctuators. It also has a integrated wifi module that can connect to any wifi network (IEEE 108.11 a/b/c) type network. Connecting to a netowrk helps the system to send realtime data to the server and the clinet appilcation can pull the data from anywhere across the world. 
+
+
+
+The total construction cost of the unit is very low, in our case a few tens of euros.
+
+Features:
+
+i. Water saving through controlled irrigation based on the existing soil moisture and the definition of the desired value.
+
+ii. Energy saving through controlled heating and cooling in combination with external conditions.
+
+iii. Monitoring and display of internal (temperature - humidity, soil humidity) and external environmental conditions (temperature - humidity) in real time and on a graph for a period of time.
+
+iv. Control of internal conditions (greenhouse), with selection by the user of the desired value of temperature (heating) and soil moisture (automatic irrigation).
+
+v. Monitoring and controlling system processes in real time, at any location, using a mobile phone or computer application.
+
+vi. Fire detection - fire extinguishing.
+
+vii. Motion detection in space (damage from animals).
+
+viii. Measurement of production growth.
+
+iX.Maintaining sutable climate inside regardless of outsied conditions
+
+
+The internal and external temprature that is measured by seperate temprature probes can help control the internal temprature. Internal temprature can be controlled by a fan or a peltier device. Humidity level can be controlled by a water springler. The moisture level of the soil can be controlled by pumping water to soil. All these functions are continuesly monitored by MCU so that we have maximum efficence and minimal wastage

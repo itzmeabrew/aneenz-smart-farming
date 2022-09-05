@@ -18,7 +18,6 @@ import java.io.IOException;
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter
 {
-
     @Autowired
     private JwtUserDetailService jwtUserDetailsService;
 
@@ -32,6 +31,7 @@ public class JwtRequestFilter extends OncePerRequestFilter
 
         String username = null;
         String jwtToken = null;
+        //filterChain.doFilter(request, response);
         // JWT Token is in the form "Bearer token". Remove Bearer word and get
         // only the Token
         if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer "))

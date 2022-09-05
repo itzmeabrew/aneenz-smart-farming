@@ -19,7 +19,6 @@ public class JwtUserDetailService implements UserDetailsService
 {
     @Autowired
     private UserRepo userRepo;
-
     @Autowired
     private PasswordEncoder bcryptEncoder;
 
@@ -34,6 +33,8 @@ public class JwtUserDetailService implements UserDetailsService
         }
         else
         {
+            //auth.setLastActive(new Date());
+            userRepo.setLoggedIn(auth.getId(),new Date());
             return new User(auth.getUserName(), auth.getPassword(), new ArrayList<>());
         }
     }
@@ -49,5 +50,10 @@ public class JwtUserDetailService implements UserDetailsService
 
         UserInfo newUser= userRepo.save(user);
         return  newUser;
+    }
+
+    public void disableUser(Boolean status,int id)
+    {
+        userRepo.setActive(status,id);
     }
 }

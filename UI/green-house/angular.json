@@ -28,7 +28,10 @@
             ],
             "styles": [
               "src/styles.css",
+              "../green-house/src/assets/sb-admin-2.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@nebular/theme/styles/prebuilt/default.css",
+              "./node_modules/ngx-ui-switch/ui-switch.component.css"
 
             ],
             "scripts": [
@@ -99,8 +102,11 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.css",
+              "../green-house/src/assets/sb-admin-2.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-
+              "node_modules/@nebular/theme/styles/prebuilt/default.css",
+              "./node_modules/ngx-ui-switch/ui-switch.component.css"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.min.js",
